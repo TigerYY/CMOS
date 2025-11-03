@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海洋装备运维与供应链数字化生态项目</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-anchor"></i>
+                <span>海洋数字化生态</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero">首页</a></li>
+                <li><a href="#overview">项目概览</a></li>
+                <li><a href="#architecture">技术架构</a></li>
+                <li><a href="#benefits">预期效益</a></li>
+                <li><a href="#cooperation">合作模式</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">海洋装备运维与供应链</span>
+                    <span class="title-line highlight">数字化生态项目</span>
+                </h1>
+                <p class="hero-subtitle">构建中国版AMOS数字化生态系统，推动海洋工程与船舶产业智能化转型</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('overview')">
+                        <i class="fas fa-rocket"></i>
+                        了解项目
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('cooperation')">
+                        <i class="fas fa-handshake"></i>
+                        合作洽谈
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-card" data-delay="0">
+                        <i class="fas fa-ship"></i>
+                        <span>智能船舶</span>
+                    </div>
+                    <div class="floating-card" data-delay="200">
+                        <i class="fas fa-cogs"></i>
+                        <span>设备管理</span>
+                    </div>
+                    <div class="floating-card" data-delay="400">
+                        <i class="fas fa-chart-line"></i>
+                        <span>数据分析</span>
+                    </div>
+                    <div class="floating-card" data-delay="600">
+                        <i class="fas fa-network-wired"></i>
+                        <span>供应链协同</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- 项目概览 -->
+    <section id="overview" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">项目概览</h2>
+                <p class="section-subtitle">从单一设备管理到全生命周期运维，再到产业级数字生态</p>
+            </div>
+            
+            <!-- 核心理念 -->
+            <div class="core-concept">
+                <div class="concept-grid">
+                    <div class="concept-item" data-aos="fade-up" data-aos-delay="0">
+                        <div class="concept-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>一个系统</h3>
+                        <p>海洋装备与船舶全生命周期管理系统</p>
+                    </div>
+                    <div class="concept-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="concept-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>两类平台</h3>
+                        <p>供应链协同平台 + 运维服务平台</p>
+                    </div>
+                    <div class="concept-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="concept-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>三类主体</h3>
+                        <p>制造方、运维方、使用单位</p>
+                    </div>
+                    <div class="concept-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="concept-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3>四个协同层</h3>
+                        <p>设备台账→供应链→运维→数据分析</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 痛点分析 -->
+            <div class="pain-points">
+                <h3 class="subsection-title">行业痛点分析</h3>
+                <div class="pain-grid">
+                    <div class="pain-item" data-aos="fade-right">
+                        <div class="pain-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>设备管理</h4>
+                        <p>缺乏统一台账、生命周期记录</p>
+                        <div class="pain-impact">难以评估折旧、维修优先级</div>
+                    </div>
+                    <div class="pain-item" data-aos="fade-right" data-aos-delay="200">
+                        <div class="pain-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h4>运维体系</h4>
+                        <p>工单流程人工化、无数据沉淀</p>
+                        <div class="pain-impact">运维决策被动、缺乏预测</div>
+                    </div>
+                    <div class="pain-item" data-aos="fade-right" data-aos-delay="400">
+                        <div class="pain-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>供应链</h4>
+                        <p>多层级采购链条、库存不透明</p>
+                        <div class="pain-impact">资金占用高、响应迟缓</div>
+                    </div>
+                    <div class="pain-item" data-aos="fade-right" data-aos-delay="600">
+                        <div class="pain-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>数据治理</h4>
+                        <p>无统一标准、接口割裂</p>
+                        <div class="pain-impact">无法形成行业级数字资产</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术架构 -->
+    <section id="architecture" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">技术架构</h2>
+                <p class="section-subtitle">构建现代化、可扩展的海洋装备数字化管理体系</p>
+            </div>
+
+            <div class="architecture-diagram">
+                <div class="arch-layer" data-aos="fade-up" data-aos-delay="0">
+                    <div class="layer-title">应用层</div>
+                    <div class="layer-items">
+                        <div class="arch-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>移动端应用</span>
+                        </div>
+                        <div class="arch-item">
+                            <i class="fas fa-desktop"></i>
+                            <span>Web管理平台</span>
+                        </div>
+                        <div class="arch-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>数据可视化</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+
+                <div class="arch-layer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="layer-title">业务层</div>
+                    <div class="layer-items">
+                        <div class="arch-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>设备管理</span>
+                        </div>
+                        <div class="arch-item">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>运维工单</span>
+                        </div>
+                        <div class="arch-item">
+                            <i class="fas fa-boxes"></i>
+                            <span>供应链管理</span>
+                        </div>
+                        <div class="arch-item">
+                            <i class="fas fa-brain"></i>
+                            <span>智能分析</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+
+                <div class="arch-layer" data-aos="fade-up" data-aos-delay="400">
+                    <div class="layer-title">数据层</div>
+                    <div class="layer-items">
+                        <div class="arch-item">
+                            <i class="fas fa-database"></i>
+                            <span>关系数据库</span>
+                        </div>
+                        <div class="arch-item">
+                            <i class="fas fa-cube"></i>
+                            <span>数据仓库</span>
+                        </div>
+                        <div class="arch-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>云存储</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+
+                <div class="arch-layer" data-aos="fade-up" data-aos-delay="600">
+                    <div class="layer-title">基础设施层</div>
+                    <div class="layer-items">
+                        <div class="arch-item">
+                            <i class="fas fa-server"></i>
+                            <span>云服务器</span>
+                        </div>
+                        <div class="arch-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>网络通信</span>
+                        </div>
+                        <div class="arch-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>安全防护</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 核心功能 -->
+            <div class="core-features">
+                <h3 class="subsection-title">核心功能模块</h3>
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="0">
+                        <div class="feature-icon">
+                            <i class="fas fa-list-alt"></i>
+                        </div>
+                        <h4>设备管理</h4>
+                        <ul>
+                            <li>统一编号体系</li>
+                            <li>实时状态监测</li>
+                            <li>维修记录追踪</li>
+                            <li>生命周期管理</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h4>运维系统</h4>
+                        <ul>
+                            <li>智能任务派工</li>
+                            <li>移动工单管理</li>
+                            <li>AI预测维护</li>
+                            <li>远程技术支持</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h4>供应链协同</h4>
+                        <ul>
+                            <li>智能备件采购</li>
+                            <li>数字化仓储</li>
+                            <li>物流跟踪</li>
+                            <li>供应商网络</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>数据分析</h4>
+                        <ul>
+                            <li>成本效益分析</li>
+                            <li>能耗优化建议</li>
+                            <li>可靠性趋势</li>
+                            <li>决策支持系统</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实施路线图 -->
+    <section id="roadmap" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">实施路线图</h2>
+                <p class="section-subtitle">分阶段推进，确保项目稳步实施</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="timeline-number">1</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">阶段 I (0-9个月)</div>
+                        <h4>基础平台建设</h4>
+                        <p>建立海洋装备与备件供应链数字化系统</p>
+                        <div class="timeline-progress">
+                            <div class="progress-bar" data-progress="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <div class="timeline-number">2</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">阶段 II (9-18个月)</div>
+                        <h4>运维平台上线</h4>
+                        <p>推出运维服务平台，实现设备生命周期管理</p>
+                        <div class="timeline-progress">
+                            <div class="progress-bar" data-progress="75"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="timeline-number">3</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">阶段 III (18-36个月)</div>
+                        <h4>生态系统完善</h4>
+                        <p>构建行业级生态数据平台与智能决策系统</p>
+                        <div class="timeline-progress">
+                            <div class="progress-bar" data-progress="30"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预期效益 -->
+    <section id="benefits" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">预期效益</h2>
+                <p class="section-subtitle">全方位提升海洋装备管理效率与经济效益</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="flip-left" data-aos-delay="0">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>管理效益</h4>
+                    <p>建立设备生命周期管理体系，实现精细化管控</p>
+                    <div class="benefit-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="95">0</span>
+                            <span class="stat-unit">%</span>
+                            <div class="stat-label">管理效率提升</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h4>经济效益</h4>
+                    <p>降低库存与采购成本，提升设备利用率</p>
+                    <div class="benefit-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="30">0</span>
+                            <span class="stat-unit">%</span>
+                            <div class="stat-label">成本降低</div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-unit">%</span>
+                            <div class="stat-label">利用率提升</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h4>技术效益</h4>
+                    <p>构建行业首个海洋装备数字孪生与运维标准体系</p>
+                    <div class="benefit-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="100">0</span>
+                            <span class="stat-unit">+</span>
+                            <div class="stat-label">技术专利</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-card" data-aos="flip-left" data-aos-delay="600">
+                    <div class="benefit-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>社会效益</h4>
+                    <p>推动海洋数字化、智能化、绿色化转型升级</p>
+                    <div class="benefit-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-unit">+</span>
+                            <div class="stat-label">合作单位</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用场景 -->
+    <section id="scenarios" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">示范应用场景</h2>
+                <p class="section-subtitle">多场景应用，全面覆盖海洋装备管理需求</p>
+            </div>
+
+            <div class="scenarios-grid">
+                <div class="scenario-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="scenario-image">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <div class="scenario-content">
+                        <h4>科研船舶设备管理</h4>
+                        <p>统一记录各类仪器设备运行状态与维护周期，实现船舶设备的全生命周期数字化管理</p>
+                        <div class="scenario-features">
+                            <span class="feature-tag">实时监控</span>
+                            <span class="feature-tag">预防维护</span>
+                            <span class="feature-tag">远程诊断</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scenario-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="scenario-image">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="scenario-content">
+                        <h4>岸基仓储与备件调配</h4>
+                        <p>数字化仓库管理系统，实时库存监控，智能备件调配，优化供应链效率</p>
+                        <div class="scenario-features">
+                            <span class="feature-tag">智能仓储</span>
+                            <span class="feature-tag">自动调配</span>
+                            <span class="feature-tag">成本优化</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scenario-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="scenario-image">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div class="scenario-content">
+                        <h4>远海作业运维支持</h4>
+                        <p>IoT数据实时上报，预测性维护预警，为远海作业提供可靠的技术保障</p>
+                        <div class="scenario-features">
+                            <span class="feature-tag">IoT监测</span>
+                            <span class="feature-tag">预测维护</span>
+                            <span class="feature-tag">应急响应</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scenario-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="scenario-image">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="scenario-content">
+                        <h4>多单位协同共享</h4>
+                        <p>建立海洋装备公共数据池，实现跨单位、跨区域的资源共享与协同管理</p>
+                        <div class="scenario-features">
+                            <span class="feature-tag">数据共享</span>
+                            <span class="feature-tag">协同管理</span>
+                            <span class="feature-tag">标准统一</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作模式 -->
+    <section id="cooperation" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">合作模式</h2>
+                <p class="section-subtitle">开放合作，共建海洋装备数字化生态</p>
+            </div>
+
+            <div class="cooperation-modes">
+                <div class="mode-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="mode-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h4>联合研发</h4>
+                    <p>共同定义行业标准、接口规范，建立技术创新联盟</p>
+                </div>
+
+                <div class="mode-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="mode-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4>示范应用</h4>
+                    <p>在科研船或装备中心先行试点，验证系统可行性</p>
+                </div>
+
+                <div class="mode-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="mode-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h4>数据共享</h4>
+                    <p>共同建设海洋装备运维数据池，实现数据价值最大化</p>
+                </div>
+
+                <div class="mode-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="mode-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4>成果转化</h4>
+                    <p>打造行业级智慧海洋运维标准平台，推广应用</p>
+                </div>
+            </div>
+
+            <div class="cooperation-process">
+                <h3 class="subsection-title">合作流程</h3>
+                <div class="process-steps">
+                    <div class="step" data-aos="fade-up" data-aos-delay="0">
+                        <div class="step-number">01</div>
+                        <h5>成立工作组</h5>
+                        <p>双方成立联合专项工作组</p>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">02</div>
+                        <h5>确定试点</h5>
+                        <p>确定试点单位与设备类别</p>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-number">03</div>
+                        <h5>制定方案</h5>
+                        <p>共同制定需求白皮书与实施路线图</p>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="600">
+                        <div class="step-number">04</div>
+                        <h5>原型开发</h5>
+                        <p>启动系统原型设计与测试验证</p>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="800">
+                        <div class="step-number">05</div>
+                        <h5>申报资金</h5>
+                        <p>申报专项资金与联合课题</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">联系我们</h2>
+                <p class="section-subtitle">携手共建数字海洋新时代</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>项目地址</h5>
+                            <p>广州市海珠区新港中路381号</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>联系电话</h5>
+                            <p>+86 020-8888-8888</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>邮箱地址</h5>
+                            <p>contact@marine-digital.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>官方网站</h5>
+                            <p>www.marine-digital.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="邮箱地址" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="联系电话">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="">请选择咨询类型</option>
+                                <option value="cooperation">合作洽谈</option>
+                                <option value="technical">技术咨询</option>
+                                <option value="demo">产品演示</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="请描述您的需求..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            发送消息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-anchor"></i>
+                        <span>海洋数字化生态</span>
+                    </div>
+                    <p>构建中国版AMOS数字化生态系统，推动海洋工程与船舶产业智能化转型</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h5>快速链接</h5>
+                    <ul>
+                        <li><a href="#overview">项目概览</a></li>
+                        <li><a href="#architecture">技术架构</a></li>
+                        <li><a href="#benefits">预期效益</a></li>
+                        <li><a href="#cooperation">合作模式</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h5>解决方案</h5>
+                    <ul>
+                        <li><a href="#">设备管理系统</a></li>
+                        <li><a href="#">运维服务平台</a></li>
+                        <li><a href="#">供应链协同</a></li>
+                        <li><a href="#">数据分析平台</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h5>联系信息</h5>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 广州市海珠区新港中路381号</p>
+                        <p><i class="fas fa-phone"></i> +86 020-8888-8888</p>
+                        <p><i class="fas fa-envelope"></i> contact@marine-digital.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 海洋装备运维与供应链数字化生态项目. 保留所有权利.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">隐私政策</a>
+                    <a href="#">服务条款</a>
+                    <a href="#">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

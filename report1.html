@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海洋装备运维与供应链数字化生态项目</title>
+    <style>
+        /* --- 1. 全局与主题设置 --- */
+        :root {
+            --marine-dark-bg: #001a33; /* 深海背景 */
+            --marine-card-bg: rgba(10, 52, 102, 0.4); /* 卡片背景 - 半透明 */
+            --marine-border: #0a4c8c;   /* 边框蓝 */
+            --marine-accent: #4fc3f7;   /* 亮蓝高光 (科技感) */
+            --marine-text-light: #f0f8ff; /* 文本亮色 (爱丽丝蓝) */
+            --marine-text-dark: #1a2b3c;  /* 文本深色 */
+            --marine-text-dim: #b0c4de;   /* 文本弱化 (浅钢蓝) */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--marine-dark-bg);
+            color: var(--marine-text-light);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(180deg, var(--marine-dark-bg) 0%, #000a1a 100%);
+            background-attachment: fixed;
+        }
+
+        /* --- 2. 布局与容器 --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid var(--marine-border);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+            text-shadow: 0 0 15px rgba(79, 195, 247, 0.5); /* 科技光晕 */
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--marine-text-dim);
+            margin: 0;
+        }
+
+        /* --- 3. 内容卡片样式 --- */
+        section {
+            background: var(--marine-card-bg);
+            border: 1px solid var(--marine-border);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            padding: 25px 30px;
+            box-shadow: 0 4px 20px rgba(0, 170, 255, 0.08);
+            backdrop-filter: blur(5px); /* 毛玻璃效果 */
+            
+            /* 动画准备 */
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        /* 动画触发 */
+        section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: var(--marine-accent);
+            border-bottom: 2px solid var(--marine-border);
+            padding-bottom: 15px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: var(--marine-accent);
+            font-weight: 500;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* --- 4. 元素样式 (列表, 表格等) --- */
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        li::marker {
+            color: var(--marine-accent);
+        }
+
+        strong {
+            color: var(--marine-accent);
+            font-weight: 600;
+        }
+
+        /* 表格容器 (用于响应式) */
+        .table-wrapper {
+            overflow-x: auto;
+            border: 1px solid var(--marine-border);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px; /* 保证在窄屏下不会过度压缩 */
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--marine-border);
+            vertical-align: top;
+        }
+
+        thead {
+            background-color: rgba(10, 76, 140, 0.5); /* 表头深色 */
+        }
+
+        th {
+            color: var(--marine-accent);
+            font-weight: 600;
+        }
+
+        tbody tr:last-child th,
+        tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        tbody tr:hover {
+            background-color: rgba(10, 76, 140, 0.2);
+        }
+
+        /* --- 5. 特定区块样式 --- */
+
+        /* 核心定义 (Section 3) */
+        .core-definition {
+            background: rgba(0, 0, 0, 0.2);
+            border-left: 4px solid var(--marine-accent);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        .core-definition h4 {
+            margin: 0 0 15px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .core-definition dl {
+            margin: 0;
+            padding-left: 5px;
+        }
+        .core-definition dt {
+            font-weight: 600;
+            color: var(--marine-text-dim);
+        }
+        .core-definition dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* 总体目标 - 时间线 (Section 4) */
+        .timeline-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .timeline-list li {
+            position: relative;
+            padding: 10px 0 10px 30px;
+            border-left: 2px solid var(--marine-border);
+        }
+        .timeline-list li::before {
+            content: '';
+            position: absolute;
+            left: -11px;
+            top: 16px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--marine-dark-bg);
+            border: 3px solid var(--marine-accent);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-list strong {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--marine-accent);
+        }
+        .timeline-list span {
+            font-size: 0.9rem;
+            color: var(--marine-text-dim);
+            font-style: italic;
+        }
+        .timeline-list li:last-child {
+            border-left-color: transparent;
+        }
+
+        /* 技术架构图 (Section 5) */
+        .tech-diagram {
+            text-align: center;
+            padding: 20px;
+        }
+        .diagram-box {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--marine-border);
+            padding: 15px 25px;
+            border-radius: 8px;
+            margin: 10px auto;
+            width: 80%;
+            max-width: 400px;
+        }
+        .diagram-arrow {
+            font-size: 2rem;
+            color: var(--marine-accent);
+            line-height: 1;
+            margin: 5px 0;
+        }
+
+        /* 结语 (Section 10) */
+        .conclusion {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 2;
+            color: var(--marine-text-dim);
+        }
+        .conclusion strong {
+            display: block;
+            font-size: 1.4rem;
+            color: #fff;
+            margin-top: 15px;
+        }
+
+        /* --- 6. 响应式设计 --- */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 20px;
+            }
+            section h2 {
+                font-size: 1.6rem;
+            }
+            .tech-diagram .diagram-box {
+                width: 95%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🧭 《海洋装备运维与供应链数字化生态项目》交流提纲</h1>
+            <p>面向海洋工程与船舶产业的“AMOS式数字化运维与供应链系统”建设方案</p>
+        </header>
+
+        <main>
+            <section id="s1">
+                <h2>一、汇报目的</h2>
+                <ul>
+                    <li>向领导汇报项目总体构想与发展方向；</li>
+                    <li>征询局方对海洋装备数字化管理的需求与建议；</li>
+                    <li>探讨在“海洋装备、运维服务、数据体系”方面的协作可能；</li>
+                    <li>寻求共建“海洋装备数字化管理与服务示范平台”的合作机制。</li>
+                </ul>
+            </section>
+
+            <section id="s2">
+                <h2>二、行业背景与痛点</h2>
+                <h3>1. 当前现状</h3>
+                <ul>
+                    <li>海洋工程装备、调查船队、科研设备 种类繁多、分布分散、维护周期长；</li>
+                    <li>供应链信息割裂，备件采购与仓储 效率低、响应慢；</li>
+                    <li>运维数据未形成统一体系， 难以追溯设备状态与生命周期成本；</li>
+                    <li>各单位独立建设系统， 缺乏共享标准与接口规范。</li>
+                </ul>
+
+                <h3>2. 行业痛点</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>领域</th>
+                                <th>主要问题</th>
+                                <th>后果</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>设备管理</strong></td>
+                                <td>缺乏统一台账、生命周期记录</td>
+                                <td>难以评估折旧、维修优先级</td>
+                            </tr>
+                            <tr>
+                                <td><strong>运维体系</strong></td>
+                                <td>工单流程人工化、无数据沉淀</td>
+                                <td>运维决策被动、缺乏预测</td>
+                            </tr>
+                            <tr>
+                                <td><strong>供应链</strong></td>
+                                <td>多层级采购链条、库存不透明</td>
+                                <td>资金占用高、响应迟缓</td>
+                            </tr>
+                            <tr>
+                                <td><strong>数据治理</strong></td>
+                                <td>无统一标准、接口割裂</td>
+                                <td>无法形成行业级数字资产</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="s3">
+                <h2>三、核心理念：构建“中国版 AMOS 数字化生态系统”</h2>
+                <p>从单一设备管理 → 到全生命周期运维 → 再到产业级数字生态。</p>
+                
+                <div class="core-definition">
+                    <h4>核心定义：“一个系统、两类平台、三类主体、四个协同层”</h4>
+                    <dl>
+                        <dt>一个系统</dt>
+                        <dd>海洋装备与船舶全生命周期管理系统（Maritime Asset Lifecycle System）</dd>
+                        
+                        <dt>两类平台</dt>
+                        <dd>① 供应链协同平台（供应商、仓储、物流）<br>② 运维与服务平台（工单、检测、派工、履约）</dd>
+                        
+                        <dt>三类主体</dt>
+                        <dd>设备制造方、运维服务方、使用单位（科研船、调查局、企业）</dd>
+                        
+                        <dt>四个协同层</dt>
+                        <dd>设备台账 → 供应链 → 运维 → 数据分析与决策</dd>
+                    </dl>
+                </div>
+            </section>
+
+            <section id="s4">
+                <h2>四、总体目标</h2>
+                <ul class="timeline-list">
+                    <li>
+                        <strong>阶段 I</strong>
+                        <span>0–9 个月</span>
+                        <p>建立海洋装备与备件供应链数字化系统</p>
+                    </li>
+                    <li>
+                        <strong>阶段 II</strong>
+                        <span>9–18 个月</span>
+                        <p>推出运维服务平台，实现设备生命周期管理</p>
+                    </li>
+                    <li>
+                        <strong>阶段 III</strong>
+                        <span>18–36 个月</span>
+                        <p>构建行业级生态数据平台与智能决策系统</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="s5">
+                <h2>五、系统建设思路</h2>
+                <h3>1. 技术架构</h3>
+                <div class="tech-diagram">
+                    <div class="diagram-box">主管单位 / 调查局</div>
+                    <div class="diagram-arrow">↓</div>
+                    <div class="diagram-box" style="border-color: var(--marine-accent); background: rgba(79, 195, 247, 0.1);"><strong>海洋装备数字化管理系统</strong></div>
+                    <div class="diagram-arrow">↓</div>
+                    <div class="diagram-box">运维服务平台 + 供应链协同</div>
+                    <div class="diagram-arrow">↓</div>
+                    <div class="diagram-box">数据中台 / IoT采集 / AI分析</div>
+                </div>
+
+                <h3>2. 功能核心</h3>
+                <ul>
+                    <li><strong>设备管理：</strong>统一编号、状态监测、维修记录</li>
+                    <li><strong>运维系统：</strong>任务派工、移动工单、AI预测维护</li>
+                    <li><strong>供应链协同：</strong>备件采购、仓储、物流、供应商网络</li>
+                    <li><strong>数据分析：</strong>生命周期成本、能耗分析、可靠性趋势</li>
+                </ul>
+            </section>
+
+            <section id="s6">
+                <h2>六、示范应用场景</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>场景</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>科研船舶设备管理</strong></td>
+                                <td>统一记录各类仪器设备运行状态与维护周期</td>
+                            </tr>
+                            <tr>
+                                <td><strong>岸基仓储与备件调配</strong></td>
+                                <td>数字化仓库 + 实时库存监控</td>
+                            </tr>
+                            <tr>
+                                <td><strong>远海作业运维支持</strong></td>
+                                <td>IoT数据上报 + 预测性维护预警</td>
+                            </tr>
+                            <tr>
+                                <td><strong>多单位协同共享</strong></td>
+                                <td>建立“海洋装备公共数据池”</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="s7">
+                <h2>七、预期效益</h2>
+                <ul>
+                    <li><strong>管理效益：</strong>建立设备生命周期管理体系，实现精细化管控</li>
+                    <li><strong>经济效益：</strong>降低库存与采购成本 20–30%，提升设备利用率 15%+</li>
+                    <li><strong>技术效益：</strong>构建行业首个“海洋装备数字孪生与运维标准体系”</li>
+                    <li><strong>社会效益：</strong>推动海洋数字化、智能化、绿色化转型升级</li>
+                </ul>
+            </section>
+
+            <section id="s8">
+                <h2>八、合作建议</h2>
+                <h3>1. 共建思路</h3>
+                <ul>
+                    <li>以广州海洋地质调查局为首个示范合作单位；</li>
+                    <li>联合搭建“海洋装备运维与供应链数字化示范平台”；</li>
+                    <li>数据与业务体系可在全国科研船、调查船、油气平台逐步复制推广。</li>
+                </ul>
+                <h3>2. 可行合作模式</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>模式</th>
+                                <th>内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>联合研发</strong></td>
+                                <td>共同定义行业标准、接口规范</td>
+                            </tr>
+                            <tr>
+                                <td><strong>示范应用</strong></td>
+                                <td>在局内科研船或装备中心先行试点</td>
+                            </tr>
+                            <tr>
+                                <td><strong>数据共享</strong></td>
+                                <td>共同建设“海洋装备运维数据池”</td>
+                            </tr>
+                            <tr>
+                                <td><strong>成果转化</strong></td>
+                                <td>打造行业级“智慧海洋运维标准平台”</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="s9">
+                <h2>九、后续工作建议</h2>
+                <ol>
+                    <li>双方成立联合专项工作组；</li>
+                    <li>确定试点单位与设备类别（如船舶动力系统、勘探仪器等）；</li>
+                    <li>共同制定需求白皮书与实施路线图；</li>
+                    <li>启动第一期系统原型设计与测试验证（6–9 个月）；</li>
+                    <li>同步申报科技部 / 自然资源部专项资金与联合课题。</li>
+                </ol>
+            </section>
+
+            <section id="s10" class="conclusion">
+                <h2>十、结语</h2>
+                <p>
+                    面向“数字海洋”与“智慧装备”的新时代，
+                    <br>
+                    我们希望以开放协作的方式，
+                    <br>
+                    与广州海洋地质调查局共同打造
+                    <br>
+                    <strong>中国首个海洋装备与运维服务数字生态平台。</strong>
+                </p>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const sections = document.querySelectorAll('section');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null, // 相对于视口
+                threshold: 0.1 // 元素进入视口 10% 时触发
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
